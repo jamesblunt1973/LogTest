@@ -8,7 +8,7 @@ for (int i = 0; i < 15; i++)
 logger.StopWithFlush();
 
 IAsyncLogger logger2 = new AsyncLogger("logs\\web-logs.txt");
-for (int i = 0; i < 25; i++)
+for (int i = 50; i > 0; i--)
 {
 	logger2.Write("Number without Flush: " + i.ToString());
 }
