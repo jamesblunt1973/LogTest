@@ -50,6 +50,7 @@ namespace LoggerTest
 
 			// Act
 			logger.Write("Test Log Entry 1");
+			await Task.Delay(1000);
 			date = date.AddSeconds(1);
 			logger.Write("Test Log Entry 2");
 
