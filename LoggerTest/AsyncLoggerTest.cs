@@ -61,6 +61,12 @@ namespace LoggerTest
 			// Assert
 			var files = Directory.GetFiles(directory);
 			Assert.Equal(2, files.Length);
+
+			var lines = File.ReadAllLines(files[0]);
+			Assert.Single(lines);
+
+			lines = File.ReadAllLines(files[1]);
+			Assert.Single(lines);
 		}
 
 		[Fact]
